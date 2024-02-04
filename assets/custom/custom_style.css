@@ -1,9 +1,11 @@
 .widget-icon-line-height {
     line-height: 116px;
 }
+
 .dropup .hide-toggle.dropdown-toggle::after {
     display: none !important;
 }
+
 ul.add-type-item {
     list-style-type: none;
     padding: 20px 10px;
@@ -13,6 +15,7 @@ ul.add-type-item {
     border-radius: 4px;
     margin-bottom: 30px;
 }
+
 .select-fields-type {
     font-size: 16px;
     font-weight: 600;
@@ -20,6 +23,7 @@ ul.add-type-item {
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     padding-left: 10px;
 }
+
 ul.add-type-item li {
     padding: 0px 0 0px 10px;
     text-align: left;
