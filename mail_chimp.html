@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8" />
-        <title>MAil Chimp</title>
+        <title>Mail Chimp</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta
             content="A fully responsive admin theme which can be used to build CRM, CMS,ERP etc."
@@ -349,10 +349,43 @@
                 <div class="content">
                     <!-- Start Content-->
                     <div class="container-fluid">
-                        <div class="row mt-3">
-
-                        </div>
-                   
+                        <div class="row pt-3">
+                            <div class="col">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="card-title">
+                                            <span class="fs-3 m-0">Mail Climp</span>
+                                            <hr>
+                                        </div>
+                                        <div class="card-content">
+                                            <form action="mail_chimp_submit" method="post" class="form">
+                                            <div class="row mb-2">
+                                                <div class="col-md-3 d-flex align-items-center">
+                                                    <label for="mail_chimp_key" class="form-label m-0">Mail Chimp Key:</label>
+                                                </div>
+                                                <div class="col-md-9">
+                                                    <input type="text" id="mail_chimp_key" name="mail_chimp_key" class="form-control" placeholder="Enter Mail Chimp Key">
+                                                </div>
+                                            </div>
+                                            <div class="row mb-2">
+                                                <div class="col-md-3 d-flex align-items-center">
+                                                    <label for="list_id" class="form-label m-0">List ID:</label>
+                                                </div>
+                                                <div class="col-md-9">
+                                                    <input type="text" id="list_id" name="list_id" class="form-control" placeholder="Enter List ID">
+                                                </div>
+                                            </div>
+                                            <div class="row mb-2">
+                                                <div>
+                                                    <button type="submit" name="submit" class="btn btn-primary float-end">Save</button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>    
                     </div>
                     <!-- container -->
                 </div>
@@ -383,101 +416,13 @@
         <!-- Vendor js -->
         <script src="assets/js/vendor.min.js"></script>
 
-        <!-- Daterangepicker js -->
-        <script src="assets/vendor/daterangepicker/moment.min.js"></script>
-        <script src="assets/vendor/daterangepicker/daterangepicker.js"></script>
-
-        <!-- Apex Charts js -->
-        <script src="assets/vendor/apexcharts/apexcharts.min.js"></script>
-
-        <!-- Vector Map js -->
-        <script src="assets/vendor/admin-resources/jquery.vectormap/jquery-jvectormap-1.2.2.min.js"></script>
-        <script src="assets/vendor/admin-resources/jquery.vectormap/maps/jquery-jvectormap-world-mill-en.js"></script>
-
         <!-- Dashboard App js -->
         <script src="assets/js/pages/dashboard.js"></script>
 
         <!-- App js -->
         <script src="assets/js/app.min.js"></script>
         <script>
-            $(document).ready(function () {
-                var chartLineColor = $("#line-chart").data("colors");
-                var options = {
-                    chart: {
-                        height: 400,
-                        type: "line",
-                        stacked: false,
-                    },
-                    dataLabels: {
-                        enabled: false,
-                    },
-                    colors: [chartLineColor],
-                    series: [
-                        {
-                            name: "Series A",
-                            data: [
-                                125, 100, 62, 656, 444, 959, 989, 800, 665, 900,
-                            ],
-                        },
-                    ],
-                    stroke: {
-                        width: [4, 4],
-                    },
-                    plotOptions: {
-                        bar: {
-                            columnWidth: "20%",
-                        },
-                    },
-                    xaxis: {
-                        categories: [
-                            "Jan",
-                            "Feb",
-                            "Mar",
-                            "Apr",
-                            "May",
-                            "Jun",
-                            "Jul",
-                            "Aug",
-                            "Sept",
-                            "Oct",
-                        ],
-                    },
-                    yaxis: [
-                        {
-                            labels: {
-                                style: {
-                                    colors: chartLineColor,
-                                },
-                            },
-                            title: {
-                                text: "No. of users",
-                                style: {
-                                    color: chartLineColor,
-                                },
-                            },
-                        },
-                    ],
-                    tooltip: {
-                        shared: false,
-                        intersect: true,
-                        x: {
-                            show: false,
-                        },
-                    },
-                    legend: {
-                        horizontalAlign: "left",
-                        offsetX: 40,
-                    },
-                };
 
-                if(document.querySelector("#line-chart")) {
-                    var chart = new ApexCharts(
-                        document.querySelector("#line-chart"),
-                        options
-                    );
-                    chart.render();
-                }
-            });
         </script>
     </body>
 </html>
