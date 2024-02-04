@@ -3,26 +3,13 @@
 
 <head>
     <meta charset="utf-8" />
-    <title>Subscription Plan</title>
+    <title>Edit Subscription Plan</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta content="A fully responsive admin theme which can be used to build CRM, CMS,ERP etc." name="description" />
     <meta content="Techzaa" name="author" />
 
     <!-- App favicon -->
     <link rel="shortcut icon" href="assets/images/favicon.png" />
-
-    <!-- Datatables css -->
-    <link href="assets/vendor/datatables.net-bs5/css/dataTables.bootstrap5.min.css" rel="stylesheet" type="text/css" />
-    <link href="assets/vendor/datatables.net-responsive-bs5/css/responsive.bootstrap5.min.css" rel="stylesheet"
-        type="text/css" />
-    <link href="assets/vendor/datatables.net-fixedcolumns-bs5/css/fixedColumns.bootstrap5.min.css" rel="stylesheet"
-        type="text/css" />
-    <link href="assets/vendor/datatables.net-fixedheader-bs5/css/fixedHeader.bootstrap5.min.css" rel="stylesheet"
-        type="text/css" />
-    <link href="assets/vendor/datatables.net-buttons-bs5/css/buttons.bootstrap5.min.css" rel="stylesheet"
-        type="text/css" />
-    <link href="assets/vendor/datatables.net-select-bs5/css/select.bootstrap5.min.css" rel="stylesheet"
-        type="text/css" />
 
     <!-- Vector Map css -->
     <link rel="stylesheet" href="assets/vendor/admin-resources/jquery.vectormap/jquery-jvectormap-1.2.2.css" />
@@ -292,76 +279,55 @@
                 <div class="container-fluid">
                     <div class="row pt-3">
                         <div class="col">
+                            <div>
+                                <span class="fs-4 m-0 text-primary"><a href="subscription_plan.html"><i class="ri-arrow-left-line"></i> Back</a></span>
+                            </div>
                             <div class="card">
                                 <div class="card-body">
+                                    
                                     <div class="card-title">
-                                        <span class="fs-3 m-0">Manage Subscription Plan</span>
-                                        <a class="float-end btn btn-outline-primary" href="add_subscription_plan.html">Add Subscription</a>
+                                        <span class="fs-3 m-0">Edit Subscription Plan</span>
                                         <hr>
                                     </div>
                                     <div class="card-content">
-                                        <div class="responsive-table-plugin">
-                                            <div class="table-rep-plugin">
-                                                <div class="table-responsive" data-pattern="priority-columns">
-                                                    <table id="subscription-plan-table"
-                                                        class="table table-striped w-100">
-                                                        <thead>
-                                                            <tr>
-                                                                <th>Name</th>
-                                                                <th>Price</th>
-                                                                <th>Number Of Month</th>
-                                                                <th>Days</th>
-                                                                <th>Listing</th>
-                                                                <th>Ads Posting</th>
-                                                                <th>Maintenance</th>
-                                                                <th class="cat_action_list">Action</th>
-                                                            </tr>
-                                                        </thead>
-                                                        <tbody>
-
-                                                            <tr>
-                                                                <td>Advanced</td>
-                                                                <td>1</td>
-                                                                <td>2</td>
-                                                                <td>60</td>
-                                                                <td>20</td>
-                                                                <td>No</td>
-                                                                <td>Yes</td>
-                                                                <td>
-                                                                    <a href="edit_subscription_plan.html"
-                                                                        class="btn btn-primary btn_cust"
-                                                                        data-toggle="tooltip" data-tooltip="Edit"><i
-                                                                            class="ri-pencil-fill"></i></a>
-                                                                    <a href="#" data-id="13"
-                                                                        class="btn btn-danger btn_delete"
-                                                                        data-toggle="tooltip" data-tooltip="Delete"><i
-                                                                            class="ri-delete-bin-line"></i></a>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>Basic</td>
-                                                                <td>1</td>
-                                                                <td>1</td>
-                                                                <td>30</td>
-                                                                <td>100</td>
-                                                                <td>No</td>
-                                                                <td>Yes</td>
-                                                                <td>
-                                                                    <a href="edit_subscription_plan.html"
-                                                                        class="btn btn-primary btn_cust"
-                                                                        data-toggle="tooltip" data-tooltip="Edit"><i
-                                                                            class="ri-pencil-fill"></i></a>
-                                                                    <a href="#" data-id="12"
-                                                                        class="btn btn-danger btn_delete"
-                                                                        data-toggle="tooltip" data-tooltip="Delete"><i
-                                                                            class="ri-delete-bin-line"></i></a>
-                                                                </td>
-                                                            </tr>
-                                                        </tbody>
-                                                    </table>
+                                        <form action="add_subscription" method="post">
+                                            <div class="row">
+                                                <div class="col-md-6 mb-2">
+                                                    <label for="subscription_name" class="form-label mb-0">Subscription Name</label>
+                                                    <input type="text" id="subscription_name" name="subscription_name" class="form-control" placeholder="Enter Subscription Name">
+                                                </div>
+                                                <div class="col-md-6 mb-2">
+                                                    <label for="subscription_price" class="form-label mb-0">Subscription Price</label>
+                                                    <input type="text" id="subscription_price" name="subscription_price" class="form-control" placeholder="Enter Subscription Price">
+                                                </div>
+                                                <div class="col-md-6 mb-2">
+                                                    <label for="no_of_month" class="form-label mb-0">Number Of Month</label>
+                                                    <input type="text" id="no_of_month" name="no_of_month" class="form-control" placeholder="Enter number of month">
+                                                </div>
+                                                <div class="col-md-6 mb-2">
+                                                    <label for="subscription_days" class="form-label mb-0">Days</label>
+                                                    <input type="text" id="subscription_days" name="subscription_days" class="form-control" placeholder="Enter Subscription Days">
+                                                </div>
+                                                <div class="col-md-6 mb-2">
+                                                    <label for="subscription_listing" class="form-label mb-0">Listing</label>
+                                                    <input type="text" id="subscription_listing" name="subscription_listing" class="form-control" placeholder="Enter Listing">
+                                                </div>
+                                                <div class="col-md-6 mb-2">
+                                                    <label for="subscription_time_period" class="form-label mb-0">Month/Year</label>
+                                                    <select id="subscription_time_period" name="subscription_time_period" class="form-select" placeholder="Select Month/Year">
+                                                        <option value="">Select one</option>
+                                                        <option value="Yes">Yes</option>
+                                                        <option value="No">No</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-12 mb-2">
+                                                    <div class="form-group">
+                                                        <button type="submit" name="submit"
+                                                            class="btn btn-primary float-end">Save</button>
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
+                                        </form>
                                     </div>
                                 </div>
                             </div>
@@ -397,21 +363,11 @@
     <!-- Vendor js -->
     <script src="assets/js/vendor.min.js"></script>
 
-    <!-- Datatables js -->
-    <script src="assets/vendor/datatables.net/js/jquery.dataTables.min.js"></script>
-    <script src="assets/vendor/datatables.net-bs5/js/dataTables.bootstrap5.min.js"></script>
-    <script src="assets/vendor/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
-    <script src="assets/vendor/datatables.net-responsive-bs5/js/responsive.bootstrap5.min.js"></script>
-
     <!-- App js -->
     <script src="assets/js/app.min.js"></script>
     <script>
         $(document).ready(function () {
-            $('#subscription-plan-table').DataTable({
-                columnDefs: [
-                    { orderable: false, targets: -1 }
-                ]
-            });
+            
         });
     </script>
 </body>
