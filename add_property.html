@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8" />
-    <title>Properties</title>
+    <title>Add Property</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta content="A fully responsive admin theme which can be used to build CRM, CMS,ERP etc." name="description" />
     <meta content="Techzaa" name="author" />
@@ -11,18 +11,10 @@
     <!-- App favicon -->
     <link rel="shortcut icon" href="assets/images/favicon.png" />
 
-    <!-- Datatables css -->
-    <link href="assets/vendor/datatables.net-bs5/css/dataTables.bootstrap5.min.css" rel="stylesheet" type="text/css" />
-    <link href="assets/vendor/datatables.net-responsive-bs5/css/responsive.bootstrap5.min.css" rel="stylesheet"
-        type="text/css" />
-    <link href="assets/vendor/datatables.net-fixedcolumns-bs5/css/fixedColumns.bootstrap5.min.css" rel="stylesheet"
-        type="text/css" />
-    <link href="assets/vendor/datatables.net-fixedheader-bs5/css/fixedHeader.bootstrap5.min.css" rel="stylesheet"
-        type="text/css" />
-    <link href="assets/vendor/datatables.net-buttons-bs5/css/buttons.bootstrap5.min.css" rel="stylesheet"
-        type="text/css" />
-    <link href="assets/vendor/datatables.net-select-bs5/css/select.bootstrap5.min.css" rel="stylesheet"
-        type="text/css" />
+    <!-- Quill css -->
+    <link href="assets/vendor/quill/quill.core.css" rel="stylesheet" type="text/css" />
+    <link href="assets/vendor/quill/quill.snow.css" rel="stylesheet" type="text/css" />
+    <link href="assets/vendor/quill/quill.bubble.css" rel="stylesheet" type="text/css" />
 
     <!-- Theme Config Js -->
     <script src="assets/js/config.js"></script>
@@ -32,6 +24,8 @@
 
     <!-- Icons css -->
     <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="assets/vendor/apexcharts/apexcharts.css" />
+
     <link rel="stylesheet" href="assets/custom/custom_style.css" />
 </head>
 
@@ -288,130 +282,71 @@
                 <div class="container-fluid">
                     <div class="row pt-3">
                         <div class="col">
+                            <div>
+                                <span class="fs-4 m-0 text-primary"><a href="faq.html"><i
+                                            class="ri-arrow-left-line"></i> Back</a></span>
+                            </div>
                             <div class="card">
                                 <div class="card-body">
-                                    <div class="row">
-                                        <div class="card-title">
-                                            <span class="fs-3 m-0">Properties List</span>
-                                            <a href="add_properties.html" class="float-end btn btn-outline-primary"
-                                                data-bs-toggle="modal" data-bs-target="#add-type-modal">Add
-                                                Properties</a>
-                                            <hr>
-                                        </div>
-                                        <div class="card-content">
-                                            <form action="" method="get">
-                                                <div class="row">
-                                                    <div class="col-md-4">
-                                                        <select name="property_type_filter" id="property_type_filter"
-                                                            class="form-select">
-                                                            <option value="">All</option>
-                                                            <option value="enable">Enable</option>
-                                                            <option value="disable">Disable</option>
-                                                            <option value="featured">Featured</option>
-                                                            <option value="no_featured">No Featured</option>
-                                                        </select>
-                                                    </div>
-                                                    <div class="col-md-4">
-                                                        <select name="property_category_filter"
-                                                            id="property_category_filter" class="form-select">
-                                                            <option value="">All Category</option>
-                                                            <option value="5">Agriculture Land</option>
-                                                            <option value="1">Flat/Apartment</option>
-                                                            <option value="4">Office/Commercial Space</option>
-                                                            <option value="3">Open Plot</option>
-                                                            <option value="6">Villa/Independent House</option>
-                                                        </select>
-                                                    </div>
-                                                    <div class="col-md-4">
-                                                        <select name="property_place_purpose_filter"
-                                                            id="property_place_purpose_filter" class="form-select">
-                                                            <option value="">All Category</option>
-                                                            <option value="rent">Rent</option>
-                                                            <option value="sale">Sale</option>
-                                                        </select>
+
+                                    <div class="card-title">
+                                        <span class="fs-3 m-0">Add Property</span>
+                                        <hr>
+                                    </div>
+                                    <div class="card-content">
+                                        <form action="add_faq" method="post">
+                                            <div class="row">
+                                                <div class="col-md-6 mb-2">
+                                                    <label for="faq_title" class="form-label mb-0">FAQ Title</label>
+                                                    <input type="text" id="faq_title" name="faq_title"
+                                                        class="form-control" placeholder="Enter FAQ Title">
+                                                </div>
+                                                <div class="col-md-6 mb-2">
+                                                    <label for="faq_status" class="form-label mb-0">FAQ Status</label>
+                                                    <select id="faq_status" name="faq_status" class="form-select"
+                                                        placeholder="Select FAQ Status">
+                                                        <option value="">Select FAQ Status</option>
+                                                        <option value="active">Active</option>
+                                                        <option value="inactive">Inactive</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-12 mb-2">
+                                                    <label for="faq_description" class="form-label mb-0">FAQ Description</label>
+                                                    <textarea id="faq_description" name="faq_description" class="form-control d-none"
+                                                        placeholder="Enter FAQ Qescription">
+                                                    </textarea>
+                                                    <div id="snow-editor" style="height: 300px;">
+                                                        <h3><span class="ql-size-large">Hello World!</span></h3>
+                                                        <p><br></p>
+                                                        <h3>This is an simple editable area.</h3>
+                                                        <p><br></p>
+                                                        <ul>
+                                                            <li>
+                                                                Select a text to reveal the toolbar.
+                                                            </li>
+                                                            <li>
+                                                                Edit rich document on-the-fly, so elastic!
+                                                            </li>
+                                                        </ul>
+                                                        <p><br></p>
+                                                        <p>
+                                                            End of simple area
+                                                        </p>
+                                                    </div><!-- end Snow-editor-->
+                                                </div>
+                                                <div class="col-12 mb-2">
+                                                    <div class="form-group">
+                                                        <button type="submit" name="submit"
+                                                            class="btn btn-primary float-end">Save</button>
                                                     </div>
                                                 </div>
-                                            </form>
-                                            <div class="row mt-3">
-                                                <div class="col-md-4">
-                                                    <div class="card d-block">
-                                                        <div class="card-body">
-                                                            <div class="d-flex flex-row justify-content-between align-items-center">
-                                                                <div class="d-flex flex-column">
-                                                                    <h4 class="card-title">Rajkot</h4>
-                                                                    <h6 class="card-subtitle text-muted">By. Ashish
-                                                                        Gupta</h6>
-                                                                </div>
-                                                                <div>
-                                                                    <span class="badge badge-outline-warning">Rent</span>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <img class="property_image_show"
-                                                            src="assets/images/properties/rajkot.jpg"
-                                                            alt="Card image cap">
-                                                        <div class="card-body">
-                                                            Category: <span class="fw-bold">Office/Commercial Space</span>
-                                                        </div>
-                                                        <div class="card-body">
-                                                            <div class="mb-1">
-                                                                <a href="javascript: void(0);"
-                                                                    class="btn btn-outline-danger"
-                                                                    data-bs-toggle="popover" title="Not Verified"
-                                                                    data-bs-placement="top" data-bs-trigger="hover"><i
-                                                                        class="ri-check-line"></i></a>
-                                                                <a href="javascript: void(0);"
-                                                                    class="btn btn-outline-primary"
-                                                                    data-bs-toggle="popover" title="Views: 200"
-                                                                    data-bs-placement="top" data-bs-trigger="hover"><i
-                                                                        class="ri-eye-line"></i></a>
-                                                                <a href="javascript: void(0);"
-                                                                    class="btn btn-outline-success"
-                                                                    data-bs-toggle="popover" title="Edit"
-                                                                    data-bs-placement="top" data-bs-trigger="hover"><i
-                                                                        class="ri-pencil-fill"></i></a>
-                                                                <a href="javascript: void(0);"
-                                                                    class="btn btn-outline-danger"
-                                                                    data-bs-toggle="popover" title="Delete"
-                                                                    data-bs-placement="top" data-bs-trigger="hover"><i
-                                                                        class="ri-delete-bin-line"></i></a>
-                                                                &ensp;
-                                                                <span class="form-check form-switch d-inline-block">
-                                                                    <input class="form-check-input" type="checkbox"
-                                                                        id="flexSwitchCheckChecked" checked>
-                                                                    <label class="form-check-label"
-                                                                        for="flexSwitchCheckChecked">Active</label>
-                                                                </span>
-                                                            </div>
-                                                            <div class="mb-1">
-                                                                <a href="javascript: void(0);"
-                                                                    class="btn btn-outline-danger"
-                                                                    data-bs-toggle="popover" title="Set Featured"
-                                                                    data-bs-placement="top" data-bs-trigger="hover"><i
-                                                                        class="ri-star-line"></i></a>
-                                                                <a href="javascript: void(0);"
-                                                                    class="btn btn-outline-danger"
-                                                                    data-bs-toggle="popover" title="Set Popular"
-                                                                    data-bs-placement="top" data-bs-trigger="hover"><i
-                                                                        class="ri-heart-line"></i></a>
-                                                                <a href="javascript: void(0);"
-                                                                    class="btn btn-outline-success"
-                                                                    data-bs-toggle="popover" title="Latest"
-                                                                    data-bs-placement="top" data-bs-trigger="hover"><i
-                                                                        class="mdi mdi-new-box"></i></a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                
                                             </div>
-                                        </div>
+                                        </form>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-
                 </div>
                 <!-- container -->
             </div>
@@ -442,16 +377,42 @@
     <!-- Vendor js -->
     <script src="assets/js/vendor.min.js"></script>
 
-    <!-- Datatables js -->
-    <script src="assets/vendor/datatables.net/js/jquery.dataTables.min.js"></script>
-    <script src="assets/vendor/datatables.net-bs5/js/dataTables.bootstrap5.min.js"></script>
-    <script src="assets/vendor/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
-    <script src="assets/vendor/datatables.net-responsive-bs5/js/responsive.bootstrap5.min.js"></script>
+    <!-- Quill Editor js -->
+    <script src="assets/vendor/quill/quill.min.js"></script>
 
     <!-- App js -->
     <script src="assets/js/app.min.js"></script>
     <script>
         $(document).ready(function () {
+            var quill = new Quill("#snow-editor", {
+                theme: "snow",
+                modules: {
+                    toolbar: [
+                        [{ font: [] }, { size: [] }],
+                        ["bold", "italic", "underline", "strike"],
+                        [{ color: [] }, { background: [] }],
+                        [{ script: "super" }, { script: "sub" }],
+                        [
+                            { header: [!1, 1, 2, 3, 4, 5, 6] },
+                            "blockquote",
+                            "code-block",
+                        ],
+                        [
+                            { list: "ordered" },
+                            { list: "bullet" },
+                            { indent: "-1" },
+                            { indent: "+1" },
+                        ],
+                        ["direction", { align: [] }],
+                        ["link", "image", "video"],
+                        ["clean"],
+                    ],
+                },
+            });
+
+            quill.on('text-change',function() {
+                $('#faq_description').val($('#snow-editor').html());
+            });
 
         });
     </script>

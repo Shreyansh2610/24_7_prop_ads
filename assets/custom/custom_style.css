@@ -31,3 +31,18 @@ ul.add-type-item li {
     width: 33%;
     margin-bottom: 8px;
 }
+
+#type-table_length {
+    float: left !important;
+    margin-bottom: 1rem;
+}
+
+#dataTables_filter {
+    float: right !important;
+    margin-bottom: 1rem;
+}
+
+.property_image_show {
+    width: 100% !important;
+    height: 300px;
+}
