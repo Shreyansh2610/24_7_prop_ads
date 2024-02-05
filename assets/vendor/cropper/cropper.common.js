@@ -196,7 +196,7 @@ var DEFAULTS = {
   // A selector for adding extra containers to preview
   preview: '',
   // Re-render the cropper when resize the window
-  responsive: true,
+  
   // Restore the cropped area after resize the window
   restore: true,
   // Check if the current image is a cross-origin image
