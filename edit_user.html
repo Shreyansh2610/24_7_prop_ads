@@ -3,26 +3,13 @@
 
 <head>
     <meta charset="utf-8" />
-    <title>Users</title>
+    <title>Edit User</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta content="A fully responsive admin theme which can be used to build CRM, CMS,ERP etc." name="description" />
     <meta content="Techzaa" name="author" />
 
     <!-- App favicon -->
     <link rel="shortcut icon" href="assets/images/favicon.png" />
-
-    <!-- Datatables css -->
-    <link href="assets/vendor/datatables.net-bs5/css/dataTables.bootstrap5.min.css" rel="stylesheet" type="text/css" />
-    <link href="assets/vendor/datatables.net-responsive-bs5/css/responsive.bootstrap5.min.css" rel="stylesheet"
-        type="text/css" />
-    <link href="assets/vendor/datatables.net-fixedcolumns-bs5/css/fixedColumns.bootstrap5.min.css" rel="stylesheet"
-        type="text/css" />
-    <link href="assets/vendor/datatables.net-fixedheader-bs5/css/fixedHeader.bootstrap5.min.css" rel="stylesheet"
-        type="text/css" />
-    <link href="assets/vendor/datatables.net-buttons-bs5/css/buttons.bootstrap5.min.css" rel="stylesheet"
-        type="text/css" />
-    <link href="assets/vendor/datatables.net-select-bs5/css/select.bootstrap5.min.css" rel="stylesheet"
-        type="text/css" />
 
     <!-- Theme Config Js -->
     <script src="assets/js/config.js"></script>
@@ -290,110 +277,134 @@
                 <div class="container-fluid">
                     <div class="row pt-3">
                         <div class="col">
+                            <div>
+                                <span class="fs-4 m-0 text-primary"><a href="users.html"><i
+                                            class="ri-arrow-left-line"></i> Back</a></span>
+                            </div>
                             <div class="card">
                                 <div class="card-body">
-                                    <div class="row">
-                                        <div class="card-title">
-                                            <span class="fs-3 m-0">User List</span>
-                                            <a href="add_user.html" class="float-end btn btn-outline-primary">Add
-                                                User</a>
-                                            <hr>
-                                        </div>
-                                        <div class="card-content">
-                                            <div class="responsive-table-plugin">
-                                                <div class="table-rep-plugin">
-                                                    <div class="table-responsive" data-pattern="priority-columns">
-                                                        <table id="user-list-table" class="table table-striped">
-                                                            <thead>
-                                                                <tr>
-                                                                    <th>Name</th>
-                                                                    <th>Email</th>
-                                                                    <th>Phone</th>
-                                                                    <th>Status</th>
-                                                                    <th>Type</th>
-                                                                    <th>Action</th>
-                                                                </tr>
-                                                            </thead>
-                                                            <tbody>
-                                                                <tr>
-                                                                    <td>
-                                                                        Ashish
-                                                                    </td>
-                                                                    <td>n881682987@gmail.net</td>
-                                                                    <td>97271346628</td>
-                                                                    <td>
-                                                                        <div class="form-check form-switch">
-                                                                            <input class="form-check-input"
-                                                                                type="checkbox"
-                                                                                id="flexSwitchCheckChecked">
-                                                                            <label class="form-check-label"
-                                                                                for="flexSwitchCheckChecked">Inactive</label>
-                                                                        </div>
-                                                                    </td>
-                                                                    <td>User</td>
-                                                                    <td>
-                                                                        <a href="edit_user.html"
-                                                                            class="btn btn-success btn-sm me-1 tooltips"
-                                                                            data-bs-toggle="tooltip"
-                                                                            data-bs-placement="top"
-                                                                            data-bs-title="Edit">
-                                                                            <i class="ri-pencil-fill"></i>
-                                                                        </a>
-                                                                        <a href="#"
-                                                                            class="btn btn-danger btn-sm tooltips"
-                                                                            data-bs-toggle="tooltip"
-                                                                            data-bs-placement="top"
-                                                                            data-bs-title="Delete">
-                                                                            <i class=" ri-delete-bin-line"></i>
-                                                                        </a>
-                                                                    </td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td>
-                                                                            Lucky Khuha
-                                                                    </td>
-                                                                    <td>lucky32khatri34@gmail.com</td>
-                                                                    <td>0546836292</td>
-                                                                    <td>
-                                                                        <div class="form-check form-switch">
-                                                                            <input class="form-check-input"
-                                                                                type="checkbox"
-                                                                                id="flexSwitchCheckChecked" checked>
-                                                                            <label class="form-check-label"
-                                                                                for="flexSwitchCheckChecked">Active</label>
-                                                                        </div>
-                                                                    </td>
-                                                                    <td>User</td>
-                                                                    <td>
-                                                                        <a href="edit_user.html"
-                                                                            class="btn btn-success btn-sm me-1 tooltips"
-                                                                            data-bs-toggle="tooltip"
-                                                                            data-bs-placement="top"
-                                                                            data-bs-title="Edit">
-                                                                            <i class="ri-pencil-fill"></i>
-                                                                        </a>
-                                                                        <a href="#"
-                                                                            class="btn btn-danger btn-sm tooltips"
-                                                                            data-bs-toggle="tooltip"
-                                                                            data-bs-placement="top"
-                                                                            data-bs-title="Delete">
-                                                                            <i class=" ri-delete-bin-line"></i>
-                                                                        </a>
-                                                                    </td>
-                                                                </tr>
-                                                                
-                                                            </tbody>
-                                                        </table>
+
+                                    <div class="card-title">
+                                        <span class="fs-3 m-0">Edit User</span>
+                                        <hr>
+                                    </div>
+                                    <div class="card-content">
+                                        <form action="add_properties" method="post">
+                                            <div class="row">
+                                                <div class="col-md-6 mb-2">
+                                                    <label for="user_name" class="form-label mb-0">Name</label>
+                                                    <input type="text" id="user_name" name="user_name"
+                                                        class="form-control" placeholder="Enter User Name">
+                                                </div>
+                                                <div class="col-md-6 mb-2">
+                                                    <label for="user_type" class="form-label mb-0">User
+                                                        Type</label>
+                                                    <select id="user_type" name="user_type" class="form-select">
+                                                        <option value="">Select User Type</option>
+                                                        <option value="5">Dealer</option>
+                                                        <option value="1">Builder</option>
+                                                        <option value="4">Owner</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-md-6 mb-2">
+                                                    <label for="user_email" class="form-label mb-0">Email</label>
+                                                    <input type="text" id="user_email" name="user_email"
+                                                        class="form-control" placeholder="Enter Email">
+                                                </div>
+                                                <div class="col-md-6 mb-2">
+                                                    <label for="user_password" class="form-label mb-0">Password</label>
+                                                    <input type="password" id="user_password" name="user_password" autocomplete="off"
+                                                        class="form-control" placeholder="Enter Password">
+                                                </div>
+                                                <div class="col-md-6 mb-2">
+                                                    <label for="user_contact" class="form-label mb-0">Contact
+                                                        no.</label>
+                                                    <input type="text" id="user_contact" name="user_contact"
+                                                        class="form-control" placeholder="Enter Contact">
+                                                </div>
+                                                <div class="col-md-6 mb-2">
+                                                    <label for="user_company_name" class="form-label mb-0">Company
+                                                        Name</label>
+                                                    <input type="text" id="user_company_name" name="user_company_name"
+                                                        class="form-control" placeholder="Enter Company Name">
+                                                </div>
+                                                <div class="col-md-6 mb-2">
+                                                    <label for="user_skype_id" class="form-label mb-0">Skype
+                                                        Link</label>
+                                                    <input type="text" id="user_skype_link" name="user_skype_id"
+                                                        class="form-control" placeholder="Enter Skype Link">
+                                                </div>
+                                                <div class="col-md-6 mb-2">
+                                                    <label for="user_fb_id" class="form-label mb-0">Facebook
+                                                        Link</label>
+                                                    <input type="text" id="user_fb_link" name="user_fb_id"
+                                                        class="form-control" placeholder="Enter Facebook Link">
+                                                </div>
+                                                <div class="col-md-6 mb-2">
+                                                    <label for="user_twitter_link" class="form-label mb-0">Twitter
+                                                        Link</label>
+                                                    <input type="text" id="user_twitter_link" name="user_twitter_link"
+                                                        class="form-control" placeholder="Enter Twitter Link">
+                                                </div>
+                                                <div class="col-md-6 mb-2">
+                                                    <label for="user_linkedin_link" class="form-label mb-0">LinkedIn
+                                                        Link</label>
+                                                    <input type="text" id="user_linkedin_link" name="user_linkedin_link"
+                                                        class="form-control" placeholder="Enter LinkedIn Link">
+                                                </div>
+                                                <div class="col-md-6 mb-2">
+                                                    <label for="user_instagram_link" class="form-label mb-0">Instagram
+                                                        Link</label>
+                                                    <input type="text" id="user_instagram_link"
+                                                        name="user_instagram_link" class="form-control"
+                                                        placeholder="Enter Instagram Link">
+                                                </div>
+                                                <div class="col-md-6 mb-2">
+                                                    <label for="user_pinterest_link" class="form-label mb-0">Pinterest
+                                                        Link</label>
+                                                    <input type="text" id="user_pinterest_link"
+                                                        name="user_pinterest_link" class="form-control"
+                                                        placeholder="Enter Pinterest Link">
+                                                </div>
+                                                <div class="col-12 mb-2">
+                                                    <label for="user_address" class="form-label mb-0">Address</label>
+                                                    <textarea class="form-control" name="user_address" id="user_address"
+                                                        rows="4" placeholder="Enter Address"></textarea>
+                                                </div>
+
+                                                <div class="col-12 mb-2">
+                                                    <div action="/" class="dropzone" id="myAwesomeDropzone"
+                                                        data-plugin="dropzone" data-previews-container="#file-previews"
+                                                        data-upload-preview-template="#uploadPreviewTemplate">
+                                                        <div class="fallback">
+                                                            <input name="file" type="file" multiple />
+                                                        </div>
+
+                                                        <div class="dz-message needsclick">
+                                                            <i class="h1 text-muted ri-upload-cloud-2-line"></i>
+                                                            <h3>Drop file here or click to upload.</h3>
+                                                            <span class="text-muted fs-13">
+                                                                <strong>Your selected file will show
+                                                                    below.</strong></span>
+                                                        </div>
+                                                    </div>
+                                                    <!-- Preview -->
+                                                    <div class="dropzone-previews mt-3" id="file-previews"></div>
+                                                </div>
+
+                                                <div class="col-12 mb-2">
+                                                    <div class="form-group">
+                                                        <button type="submit" name="submit"
+                                                            class="btn btn-primary float-end">Save</button>
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>
+                                        </form>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-
                 </div>
                 <!-- container -->
             </div>
@@ -415,6 +426,29 @@
             <!-- end Footer -->
         </div>
 
+        <!-- file preview template -->
+        <div class="d-none" id="uploadPreviewTemplate">
+            <div class="card mt-1 mb-0 shadow-none border">
+                <div class="p-2">
+                    <div class="row align-items-center">
+                        <div class="col-auto">
+                            <img data-dz-thumbnail src="#" class="avatar-sm rounded bg-light" alt="">
+                        </div>
+                        <div class="col ps-0">
+                            <a href="javascript:void(0);" class="text-muted fw-bold" data-dz-name></a>
+                            <p class="mb-0" data-dz-size></p>
+                        </div>
+                        <div class="col-auto">
+                            <!-- Button -->
+                            <a href="" class="btn btn-link btn-lg text-danger" data-dz-remove>
+                                <i class="ri-close-line"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <!-- ============================================================== -->
         <!-- End Page content -->
         <!-- ============================================================== -->
@@ -424,22 +458,20 @@
     <!-- Vendor js -->
     <script src="assets/js/vendor.min.js"></script>
 
-    <!-- Datatables js -->
-    <script src="assets/vendor/datatables.net/js/jquery.dataTables.min.js"></script>
-    <script src="assets/vendor/datatables.net-bs5/js/dataTables.bootstrap5.min.js"></script>
-    <script src="assets/vendor/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
-    <script src="assets/vendor/datatables.net-responsive-bs5/js/responsive.bootstrap5.min.js"></script>
+    <!-- Quill Editor js -->
+    <script src="assets/vendor/quill/quill.min.js"></script>
+
+    <!-- Dropzone File Upload js -->
+    <script src="assets/vendor/dropzone/min/dropzone.min.js"></script>
+
+    <!-- File Upload Demo js -->
+    <script src="assets/js/pages/fileupload.init.js"></script>
 
     <!-- App js -->
     <script src="assets/js/app.min.js"></script>
     <script>
         $(document).ready(function () {
-            $('#user-list-table').DataTable({
-                columnDefs: [
-                    { orderable: false, targets: -1 }
-                ],
 
-            });
         });
     </script>
 </body>
