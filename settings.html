@@ -319,65 +319,53 @@
                                         </ul>
                                         <div class="tab-content">
                                             <div class="tab-pane show active" id="header-settings">
-                                                <form action="add_properties" method="post">
+                                                <form action="" method="post" enctype="multipart/form-data">
                                                     <div class="row">
                                                         <div class="col-12 mb-2">
-                                                            <div action="/" class="dropzone" id="myAwesomeDropzone"
-                                                                data-plugin="dropzone" data-previews-container="#file-previews"
-                                                                data-upload-preview-template="#uploadPreviewTemplate">
-                                                                <div class="fallback">
-                                                                    <input name="site_logo" type="file" />
-                                                                </div>
-        
-                                                                <div class="dz-message needsclick">
-                                                                    <i class="h1 text-muted ri-upload-cloud-2-line"></i>
-                                                                    <h3>Drop Site Logo here or click to upload.</h3>
-                                                                    <span class="text-muted fs-13">
-                                                                        <strong>Your selected image file will show
-                                                                            below.</strong></span>
-                                                                </div>
-                                                            </div>
-                                                            <!-- Preview -->
-                                                            <div class="dropzone-previews mt-3" id="file-previews"></div>
+                                                            <label for="site_logo">Site Logo</label>
+                                                            <input name="site_logo" id="site_logo" class="form-control"
+                                                                type="file" />
                                                         </div>
                                                         <div class="col-md-6 mb-2">
-                                                            <label for="site_title" class="form-label mb-0">Site Title</label>
+                                                            <label for="site_title" class="form-label mb-0">Site
+                                                                Title</label>
                                                             <input type="text" id="site_title" name="site_title"
                                                                 class="form-control" placeholder="Enter Site Title">
                                                         </div>
                                                         <div class="col-6 mb-2">
-                                                            <label for="site_keywords" class="form-label mb-0">Site Keywords
-                                                                <span class="text-danger">(Use comma(,) to separate keyword.)</span></label>
+                                                            <label for="site_keywords" class="form-label mb-0">Site
+                                                                Keywords
+                                                                <span class="text-danger">(Use comma(,) to separate
+                                                                    keyword.)</span></label>
                                                             <input type="text" id="site_keywords" name="site_keywords"
                                                                 class="form-control" placeholder="Enter Site Keywords">
                                                         </div>
-                                                        
+
                                                         <div class="col-md-12 mb-2">
-                                                            <label for="site_description" class="form-label mb-0">Site Description</label>
-                                                            <textarea id="site_description" name="site_description" rows="4"
-                                                                class="form-control" placeholder="Enter Site Description"></textarea>
+                                                            <label for="site_description" class="form-label mb-0">Site
+                                                                Description</label>
+                                                            <textarea id="site_description" name="site_description"
+                                                                rows="4" class="form-control"
+                                                                placeholder="Enter Site Description"></textarea>
                                                         </div>
-        
+
                                                         <div class="col-12 mb-2">
-                                                            <div action="/" class="dropzone" id="myAwesomeDropzone"
-                                                                data-plugin="dropzone" data-previews-container="#file-previews"
-                                                                data-upload-preview-template="#uploadPreviewTemplate">
-                                                                <div class="fallback">
-                                                                    <input name="admin_panel_logo" type="file" multiple />
-                                                                </div>
-        
-                                                                <div class="dz-message needsclick">
-                                                                    <i class="h1 text-muted ri-upload-cloud-2-line"></i>
-                                                                    <h3>Drop Admin panel logo here or click to upload.</h3>
-                                                                    <span class="text-muted fs-13">
-                                                                        <strong>Your selected image file will show
-                                                                            below.</strong></span>
-                                                                </div>
-                                                            </div>
-                                                            <!-- Preview -->
-                                                            <div class="dropzone-previews mt-3" id="file-previews"></div>
+                                                            <label for="admin_panel_logo">Admin Panel Logo <span
+                                                                    class="text-danger">(Recommended resolution:70x70 or
+                                                                    80x80)</span></label>
+                                                            <input name="admin_panel_logo" id="admin_panel_logo"
+                                                                class="form-control" type="file" />
                                                         </div>
-        
+
+                                                        <div class="col-12 mb-2">
+                                                            <label for="admin_panel_logo">Web Favicon <span
+                                                                    class="text-danger">(Recommended resolution: 16x16
+                                                                    or Square Image And must be smaller
+                                                                    image)</span></label>
+                                                            <input name="admin_panel_logo" id="admin_panel_logo"
+                                                                class="form-control" type="file" />
+                                                        </div>
+
                                                         <div class="col-12 mb-2">
                                                             <div class="form-group">
                                                                 <button type="submit" name="submit"
@@ -388,82 +376,254 @@
                                                 </form>
                                             </div>
 
-                                            <div class="tab-pane" id="requested-ads-list">
-                                                <div class="responsive-table-plugin">
-                                                    <div class="table-rep-plugin">
-                                                        <div class="table-responsive" data-pattern="priority-columns">
-                                                            <table id="contact-us-table"
-                                                                class="table table-striped w-100">
-                                                                <thead>
-                                                                    <tr>
-                                                                        <th>Name</th>
-                                                                        <th>Email</th>
-                                                                        <th>PhoneNo</th>
-                                                                        <th>Ads Postion (728x90PX)</th>
-                                                                        <th>Ads Postion (300x280PX)</th>
-                                                                        <th>Created Date</th>
-                                                                        <th>Action</th>
-                                                                    </tr>
-                                                                </thead>
-                                                                <tbody>
-                                                                    <tr>
-                                                                        <td>Kristy Hardy</td>
-                                                                        <td>kristy.hardy56@msn.com</td>
-                                                                        <td>+917896543120</td>
-                                                                        <td>
-                                                                            Home top
-                                                                            <br>
-                                                                            <a href="javascript:void(0)"
-                                                                                id="ads_image1">View More</a>
-                                                                        </td>
-                                                                        <td>-</td>
-                                                                        <td>02-12-2023</td>
-                                                                        <td>
-                                                                            <a href="javascript:void(0)" data-id="190"
-                                                                                class="btn btn-danger btn_delete"
-                                                                                data-toggle="tooltip"
-                                                                                data-tooltip="Delete"><i
-                                                                                    class="ri-delete-bin-line"></i></a>
-                                                                        </td>
-                                                                    </tr>
-                                                                </tbody>
-                                                            </table>
+                                            <div class="tab-pane" id="web-settings">
+                                                <form action="" name="settings_home" method="post"
+                                                    class="form form-horizontal">
+                                                    <div class="section">
+                                                        <div class="section-body">
+                                                            <div class="form-group">
+                                                                <div class="row">
+                                                                    <div class="col-md-4">
+                                                                        <label class="control-label">Home
+                                                                            Premium/Popular Limit:-</label>
+                                                                    </div>
+                                                                    <div class="col-md-4">
+                                                                        <input type="number" min="5"
+                                                                            name="home_premium_limit"
+                                                                            id="home_premium_limit" value="10"
+                                                                            class="form-control">
+                                                                    </div>
+                                                                    <div class="col-md-4">
+                                                                        <input type="number" min="5"
+                                                                            name="home_popular_limit"
+                                                                            id="home_popular_limit" value="10"
+                                                                            class="form-control">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <div class="row">
+                                                                    <div class="col-md-4">
+                                                                        <label class="control-label">Latest
+                                                                            Limit/Currency Code:-</label>
+                                                                    </div>
+                                                                    <div class="col-md-4">
+                                                                        <input type="number" min="5"
+                                                                            name="home_latest_limit"
+                                                                            id="home_latest_limit" value="10"
+                                                                            class="form-control">
+                                                                    </div>
+
+                                                                    <div class="col-md-4">
+                                                                        <input type="text" name="curruncy" id="curruncy"
+                                                                            value="Rs." class="form-control">
+                                                                        <p><a href="https://html-css-js.com/html/character-codes/currency"
+                                                                                title="Click to get others"
+                                                                                target="_blank">Currency Sign</a></p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <div class="row">
+                                                                    <div class="col-md-4">
+                                                                        <label class="control-label">Footer
+                                                                            Description:</label>
+                                                                    </div>
+                                                                    <div class="col-md-8">
+
+                                                                        <textarea name="description" id="description"
+                                                                            class="form-control">2024 © 24/7 PROP ADS</textarea>
+
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <br>
+                                                            <div class="form-group">
+                                                                <button type="submit" name="home_submit"
+                                                                    class="btn btn-primary float-end">Save</button>
+                                                            </div>
+                                                            <br>
                                                         </div>
                                                     </div>
-                                                </div>
+                                                </form>
                                             </div>
-                                            <div class="tab-pane" id="ads-description">
-                                                <form action="contact_us_edit_map_submit" method="post" class="form">
-                                                    <div class="col-12 mb-2">
-                                                        <label for="ads_description" class="form-label mb-0">FAQ Description</label>
-                                                        <textarea id="ads_description" name="ads_description" class="form-control d-none"
-                                                            placeholder="Enter FAQ Qescription">
-                                                        </textarea>
-                                                        <div id="snow-editor" style="height: 300px;">
-                                                            <h3><span class="ql-size-large">Hello World!</span></h3>
-                                                            <p><br></p>
-                                                            <h3>This is an simple editable area.</h3>
-                                                            <p><br></p>
-                                                            <ul>
-                                                                <li>
-                                                                    Select a text to reveal the toolbar.
-                                                                </li>
-                                                                <li>
-                                                                    Edit rich document on-the-fly, so elastic!
-                                                                </li>
-                                                            </ul>
-                                                            <p><br></p>
-                                                            <p>
-                                                                End of simple area
-                                                            </p>
-                                                        </div><!-- end Snow-editor-->
-                                                    </div>
-
-                                                    <div class="form-group">
-                                                        <button type="submit" name="submit"
-                                                            class="btn btn-primary float-end">Save</button>
+                                            <div class="tab-pane" id="social-settings">
+                                                <form action="" method="post" class="form">
+                                                    <div class="row">
+                                                        <div class="col-md-6 mb-2">
+                                                            <label for="fb_link" class="form-label mb-0">Facebook
+                                                                Link</label>
+                                                            <input type="text" id="fb_link" name="fb_link"
+                                                                class="form-control" placeholder="Enter Facebook Link">
+                                                        </div>
+                                                        <div class="col-md-6 mb-2">
+                                                            <label for="twitter_link" class="form-label mb-0">Twitter
+                                                                Link</label>
+                                                            <input type="text" id="twitter_link" name="twitter_link"
+                                                                class="form-control" placeholder="Enter Twitter Link">
+                                                        </div>
+                                                        <div class="col-md-6 mb-2">
+                                                            <label for="linkedin_link" class="form-label mb-0">LinkedIn
+                                                                Link</label>
+                                                            <input type="text" id="linkedin_link" name="linkedin_link"
+                                                                class="form-control" placeholder="Enter LinkedIn Link">
+                                                        </div>
+                                                        <div class="col-md-6 mb-2">
+                                                            <label for="instagram_link"
+                                                                class="form-label mb-0">Instagram
+                                                                Link</label>
+                                                            <input type="text" id="instagram_link" name="instagram_link"
+                                                                class="form-control" placeholder="Enter Instagram Link">
+                                                        </div>
+                                                        <div class="col-md-6 mb-2">
+                                                            <label for="pinterest_link"
+                                                                class="form-label mb-0">Pinterest
+                                                                Link</label>
+                                                            <input type="text" id="pinterest_link" name="pinterest_link"
+                                                                class="form-control" placeholder="Enter Pinterest Link">
+                                                        </div>
+                                                        <div class="col-12 mb-2">
+                                                            <button type="submit" name="submit"
+                                                                class="btn btn-primary float-end">Save</button>
+                                                        </div>
                                                     </div>
                                                 </form>
+                                            </div>
+                                            <div class="tab-pane" id="page-settings">
+                                                <ul class="nav nav-pills border-bottom mb-3">
+                                                    <li class="nav-item">
+                                                        <a href="#contact-us" data-bs-toggle="tab" aria-expanded="true"
+                                                            class="nav-link bg-nav-pills rounded-0 active">
+                                                            Contact Us
+                                                        </a>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a href="#about-us" data-bs-toggle="tab" aria-expanded="false"
+                                                            class="nav-link bg-nav-pills rounded-0">
+                                                            About Us
+                                                        </a>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a href="#terms-service" data-bs-toggle="tab"
+                                                            aria-expanded="false"
+                                                            class="nav-link bg-nav-pills rounded-0">
+                                                            Terms Service
+                                                        </a>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a href="#privacy-policy" data-bs-toggle="tab"
+                                                            aria-expanded="false"
+                                                            class="nav-link bg-nav-pills rounded-0">
+                                                            Privacy Policy
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                                <div class="tab-content">
+                                                    <div class="tab-pane show active" id="contact-us">
+                                                        <form action="" class="form" method="post">
+                                                            <div class="row">
+                                                                <div class="col-md-6 mb-2">
+                                                                    <label for="company_name"
+                                                                        class="form-label mb-0">Company Name</label>
+                                                                    <input type="text" id="company_name"
+                                                                        name="company_name" class="form-control"
+                                                                        placeholder="Enter Company Name">
+                                                                </div>
+                                                                <div class="col-md-6 mb-2">
+                                                                    <label for="company_email"
+                                                                        class="form-label mb-0">Email</label>
+                                                                    <input type="text" id="company_email"
+                                                                        name="company_email" class="form-control"
+                                                                        placeholder="Enter Company Email">
+                                                                </div>
+                                                                <div class="col-md-12 mb-2">
+                                                                    <label for="company_address"
+                                                                        class="form-label mb-0">Address</label>
+                                                                    <textarea type="text" id="company_address"
+                                                                        name="company_address" class="form-control"
+                                                                        placeholder="Enter Address"></textarea>
+                                                                </div>
+                                                                <div class="col-md-6 mb-2">
+                                                                    <label for="company_address"
+                                                                        class="form-label mb-0">Contact</label>
+                                                                    <textarea type="text" id="company_contact"
+                                                                        name="company_contact" class="form-control"
+                                                                        placeholder="Enter Contact"></textarea>
+                                                                </div>
+                                                                <div class="col-md-12 mb-2">
+                                                                    <button type="submit" name="submit"
+                                                                        class="btn btn-primary float-end">Save</button>
+                                                                </div>
+                                                            </div>
+                                                        </form>
+                                                    </div>
+                                                    <div class="tab-pane" id="about-us">
+                                                        <form action="" class="form" method="post">
+                                                            <div class="row">
+                                                                <div class="col-12 mb-2">
+                                                                    <label for="about_us"
+                                                                        class="form-label mb-0">About Us</label>
+                                                                    <textarea id="about_us"
+                                                                        name="about_us"
+                                                                        class="form-control d-none"
+                                                                        placeholder="Enter About Us">
+                                                                    </textarea>
+                                                                    <div id="snow-editor1" style="height: 300px;">
+                                                                        <p>About Us description</p>
+                                                                    </div><!-- end Snow-editor-->
+                                                                </div>
+                                                                <div class="col-12 mb-2">
+                                                                    <button type="submit" name="submit"
+                                                                        class="btn btn-primary float-end">Save</button>
+                                                                </div>
+                                                            </div>
+                                                        </form>
+                                                    </div>
+                                                    <div class="tab-pane" id="terms-service">
+                                                        <form action="" class="form" method="post">
+                                                            <div class="row">
+                                                                <div class="col-12 mb-2">
+                                                                    <label for="terms_service"
+                                                                        class="form-label mb-0">Terms Service</label>
+                                                                    <textarea id="terms_service"
+                                                                        name="terms_service"
+                                                                        class="form-control d-none"
+                                                                        placeholder="Enter Terms Service">
+                                                                    </textarea>
+                                                                    <div id="snow-editor2" style="height: 300px;">
+                                                                        <p>Terms Service</p>
+                                                                    </div><!-- end Snow-editor-->
+                                                                </div>
+                                                                <div class="col-12 mb-2">
+                                                                    <button type="submit" name="submit"
+                                                                        class="btn btn-primary float-end">Save</button>
+                                                                </div>
+                                                            </div>
+                                                        </form>
+                                                    </div>
+                                                    <div class="tab-pane" id="privacy-policy">
+                                                        <form action="" class="form" method="post">
+                                                            <div class="row">
+                                                                <div class="col-12 mb-2">
+                                                                    <label for="privacy_policy"
+                                                                        class="form-label mb-0">Privacy Policy</label>
+                                                                    <textarea id="privacy_policy"
+                                                                        name="privacy_policy"
+                                                                        class="form-control d-none"
+                                                                        placeholder="Enter About Us">
+                                                                    </textarea>
+                                                                    <div id="snow-editor3" style="height: 300px;">
+                                                                        <p>Privacy Policy</p>
+                                                                    </div><!-- end Snow-editor-->
+                                                                </div>
+                                                                <div class="col-12 mb-2">
+                                                                    <button type="submit" name="submit"
+                                                                        class="btn btn-primary float-end">Save</button>
+                                                                </div>
+                                                            </div>
+                                                        </form>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -493,29 +653,6 @@
             <!-- end Footer -->
         </div>
 
-        <!-- file preview template -->
-        <div class="d-none" id="uploadPreviewTemplate">
-            <div class="card mt-1 mb-0 shadow-none border">
-                <div class="p-2">
-                    <div class="row align-items-center">
-                        <div class="col-auto">
-                            <img data-dz-thumbnail src="#" class="avatar-sm rounded bg-light" alt="">
-                        </div>
-                        <div class="col ps-0">
-                            <a href="javascript:void(0);" class="text-muted fw-bold" data-dz-name></a>
-                            <p class="mb-0" data-dz-size></p>
-                        </div>
-                        <div class="col-auto">
-                            <!-- Button -->
-                            <a href="" class="btn btn-link btn-lg text-danger" data-dz-remove>
-                                <i class="ri-close-line"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
         <!-- ============================================================== -->
         <!-- End Page content -->
         <!-- ============================================================== -->
@@ -535,15 +672,7 @@
     <script src="assets/js/app.min.js"></script>
     <script>
         $(document).ready(function () {
-            $('#contact-us-table').DataTable({
-                columnDefs: [
-                    { orderable: false, targets: -1 }
-                ],
-
-            });
-
-
-            var quill = new Quill("#snow-editor", {
+            var snowEditorOptions = {
                 theme: "snow",
                 modules: {
                     toolbar: [
@@ -567,10 +696,19 @@
                         ["clean"],
                     ],
                 },
-            });
+            };
+            var quill1 = new Quill("#snow-editor1",snowEditorOptions);
+            var quill2 = new Quill("#snow-editor2",snowEditorOptions);
+            var quill3 = new Quill("#snow-editor3",snowEditorOptions);
 
-            quill.on('text-change',function() {
-                $('#ads_description').val($('#snow-editor').html());
+            quill1.on('text-change', function () {
+                $('#about_us').val($('#snow-editor1').html());
+            });
+            quill2.on('text-change', function () {
+                $('#terms_service').val($('#snow-editor2').html());
+            });
+            quill3.on('text-change', function () {
+                $('#privacy_policy').val($('#snow-editor2').html());
             });
         });
     </script>
