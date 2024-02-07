@@ -11,7 +11,7 @@ function hexToRGB(t, e) {
     function t() {
         (this.$body = a("body")),
             (this.charts = []),
-            (this.defaultColors = ["#3bc0c3", "#4489e4", "#d03f3f", "#716cb0"]);
+            (this.defaultColors = ["#F58216", "#4489e4", "#d03f3f", "#716cb0"]);
     }
     (t.prototype.borderRadiusExample = function () {
         var t = document.getElementById("border-radius-example"),

@@ -1,4 +1,4 @@
-var colors = ["#3bc0c3"],
+var colors = ["#F58216"],
     dataColors = $("#basic-area").data("colors"),
     options = {
         chart: { height: 380, type: "area", zoom: { enabled: !1 } },
@@ -23,7 +23,7 @@ var colors = ["#3bc0c3"],
         ],
     },
     chart = new ApexCharts(document.querySelector("#basic-area"), options),
-    colors = (chart.render(), ["#3bc0c3", "#6c757d"]),
+    colors = (chart.render(), ["#F58216", "#6c757d"]),
     dataColors = $("#spline-area").data("colors"),
     options = {
         chart: { height: 380, type: "area" },
@@ -106,7 +106,7 @@ var colors = ["#3bc0c3"],
             document.querySelector("#grouped-bar"),
             options
         )).render(),
-        ["#3bc0c3", "#47ad77", "#fa5c7c"]),
+        ["#F58216", "#47ad77", "#fa5c7c"]),
     dataColors = $("#basic-boxplot").data("colors"),
     options = {
         series: [
@@ -141,7 +141,7 @@ var colors = ["#3bc0c3"],
             document.querySelector("#basic-boxplot"),
             options
         )).render(),
-        ["#3bc0c3", "#47ad77", "#fa5c7c"]),
+        ["#F58216", "#47ad77", "#fa5c7c"]),
     options =
         ((dataColors = $("#scatter-boxplot").data("colors")) &&
             (colors = dataColors.split(",")),
@@ -217,7 +217,7 @@ function generateData(o, e, t) {
     document.querySelector("#scatter-boxplot"),
     options
 )).render();
-(colors = ["#3bc0c3", "#edc755", "#fa5c7c"]),
+(colors = ["#F58216", "#edc755", "#fa5c7c"]),
     (dataColors = $("#simple-bubble").data("colors")) &&
         (colors = dataColors.split(",")),
     (options = {
@@ -265,7 +265,7 @@ function generateData1(o, e, t) {
     document.querySelector("#simple-bubble"),
     options
 )).render();
-var colors = ["#3bc0c3", "#47ad77", "#fa5c7c", "#39afd1"],
+var colors = ["#F58216", "#47ad77", "#fa5c7c", "#39afd1"],
     options2 =
         ((dataColors = $("#second-bubble").data("colors")) &&
             (colors = dataColors.split(",")),
@@ -366,7 +366,7 @@ var colors = ["#3bc0c3", "#47ad77", "#fa5c7c", "#39afd1"],
         document.querySelector("#combo-candlestick"),
         optionsCandlestick
     ),
-    colors = (chartCandlestick.render(), ["#3bc0c3", "#edc755"]),
+    colors = (chartCandlestick.render(), ["#F58216", "#edc755"]),
     options =
         ((dataColors = $("#combo-bar-candlestick").data("colors")) &&
             (colors = dataColors.split(",")),
@@ -415,7 +415,7 @@ var colors = ["#3bc0c3", "#47ad77", "#fa5c7c", "#39afd1"],
             document.querySelector("#combo-bar-candlestick"),
             options
         )).render(),
-        ["#3bc0c3", "#4489e4", "#33b0e0"]),
+        ["#F58216", "#4489e4", "#33b0e0"]),
     dataColors = $("#basic-column").data("colors"),
     options = {
         chart: { height: 396, type: "bar", toolbar: { show: !1 } },
@@ -472,7 +472,7 @@ var colors = ["#3bc0c3", "#47ad77", "#fa5c7c", "#39afd1"],
             document.querySelector("#basic-column"),
             options
         )).render(),
-        ["#3bc0c3"]),
+        ["#F58216"]),
     dataColors = $("#datalabels-column").data("colors"),
     options = {
         chart: { height: 380, type: "bar", toolbar: { show: !1 } },
@@ -617,7 +617,7 @@ var colors = ["#3bc0c3", "#47ad77", "#fa5c7c", "#39afd1"],
             document.querySelector("#line-chart"),
             options
         )).render(),
-        ["#d03f3f,#3bc0c3"]),
+        ["#d03f3f,#F58216"]),
     dataColors = $("#line-chart-datalabel").data("colors"),
     options = {
         chart: {
@@ -666,7 +666,7 @@ var colors = ["#3bc0c3", "#47ad77", "#fa5c7c", "#39afd1"],
             document.querySelector("#line-chart-datalabel"),
             options
         )).render(),
-        ["#4489e4", "#3bc0c3"]),
+        ["#4489e4", "#F58216"]),
     dataColors = $("#line-column-mixed").data("colors"),
     options = {
         chart: { height: 380, type: "line", toolbar: { show: !1 } },
@@ -713,7 +713,7 @@ var colors = ["#3bc0c3", "#47ad77", "#fa5c7c", "#39afd1"],
             document.querySelector("#line-column-mixed"),
             options
         )).render(),
-        ["#3bc0c3", "#39afd1", "#fa5c7c"]),
+        ["#F58216", "#39afd1", "#fa5c7c"]),
     dataColors = $("#multiple-yaxis-mixed").data("colors"),
     options = {
         chart: {
@@ -780,7 +780,7 @@ var colors = ["#3bc0c3", "#47ad77", "#fa5c7c", "#39afd1"],
             document.querySelector("#multiple-yaxis-mixed"),
             options
         )).render(),
-        ["#3bc0c3", "#6c757d", "#4489e4", "#d03f3f", "#edc755"]),
+        ["#F58216", "#6c757d", "#4489e4", "#d03f3f", "#edc755"]),
     dataColors = $("#simple-pie").data("colors"),
     options = {
         chart: { height: 320, type: "pie" },
@@ -809,7 +809,7 @@ var colors = ["#3bc0c3", "#47ad77", "#fa5c7c", "#39afd1"],
             document.querySelector("#simple-pie"),
             options
         )).render(),
-        ["#3bc0c3", "#6c757d", "#4489e4", "#d03f3f", "#edc755"]),
+        ["#F58216", "#6c757d", "#4489e4", "#d03f3f", "#edc755"]),
     dataColors = $("#simple-donut").data("colors"),
     options = {
         chart: { height: 320, type: "donut" },
@@ -838,7 +838,7 @@ var colors = ["#3bc0c3", "#47ad77", "#fa5c7c", "#39afd1"],
             document.querySelector("#simple-donut"),
             options
         )).render(),
-        ["#3bc0c3", "#6c757d", "#4489e4", "#d03f3f", "#edc755", "#33b0e0"]),
+        ["#F58216", "#6c757d", "#4489e4", "#d03f3f", "#edc755", "#33b0e0"]),
     dataColors = $("#basic-polar-area").data("colors"),
     options = {
         series: [16, 22, 24, 16, 17, 12],
@@ -947,7 +947,7 @@ var colors = ["#3bc0c3", "#47ad77", "#fa5c7c", "#39afd1"],
             document.querySelector("#radar-polygon"),
             options
         )).render(),
-        ["#3bc0c3"]),
+        ["#F58216"]),
     dataColors = $("#basic-radialbar").data("colors"),
     options = {
         chart: { height: 320, type: "radialBar" },
@@ -966,7 +966,7 @@ var colors = ["#3bc0c3", "#47ad77", "#fa5c7c", "#39afd1"],
             document.querySelector("#basic-radialbar"),
             options
         )).render(),
-        ["#3bc0c3", "#4489e4", "#edc755", "#33b0e0"]),
+        ["#F58216", "#4489e4", "#edc755", "#33b0e0"]),
     dataColors = $("#multiple-radialbar").data("colors"),
     options = {
         chart: { height: 320, type: "radialBar" },
